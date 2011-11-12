@@ -1,4 +1,4 @@
-#
+
 # This is the product configuration for a full targa
 #
 
@@ -37,38 +37,16 @@ PRODUCT_COPY_FILES += \
     device/motorola/targa/prebuilt/etc/permissions/android.hardware.wifi.xml:/system/etc/permissions/android.hardware.wifi.xml \
     device/motorola/targa/prebuilt/etc/permissions/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml \
     device/motorola/targa/prebuilt/etc/permissions/com.android.location.provider.xml:/system/etc/permissions/com.android.location.provider.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.cequint.platform.xml:/system/etc/permissions/com.cequint.platform.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.camera.xml:/system/etc/permissions/com.motorola.android.camera.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.customization.xml:/system/etc/permissions/com.motorola.android.customization.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.datamanager_library.xml:/system/etc/permissions/com.motorola.android.datamanager_library.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.dlna_library.xml:/system/etc/permissions/com.motorola.android.dlna_library.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.drm1config.xml:/system/etc/permissions/com.motorola.android.drm1config.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.drmcommonconfig.xml:/system/etc/permissions/com.motorola.android.drmcommonconfig.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.iextdispservice.xml:/system/etc/permissions/com.motorola.android.iextdispservice.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.imirrorservice.xml:/system/etc/permissions/com.motorola.android.imirrorservice.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.mediasyncconfig.xml:/system/etc/permissions/com.motorola.android.mediasyncconfig.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.mobad.xml:/system/etc/permissions/com.motorola.android.mobad.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.nativehdmiapis_v1.xml:/system/etc/permissions/com.motorola.android.nativehdmiapis_v1.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.storage_library.xml:/system/etc/permissions/com.motorola.android.storage_library.xml \
     device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.tcmd.xml:/system/etc/permissions/com.motorola.android.tcmd.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.android.widget.xml:/system/etc/permissions/com.motorola.android.widget.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.motorola.app.admin_library.xml:/system/etc/permissions/com.motorola.app.admin_library.xml \
     device/motorola/targa/prebuilt/etc/permissions/com.motorola.atcmd_library.xml:/system/etc/permissions/com.motorola.atcmd_library.xml \
     device/motorola/targa/prebuilt/etc/permissions/com.motorola.device.xml:/system/etc/permissions/com.motorola.device.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.nbi.android.xml:/system/etc/permissions/com.nbi.android.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.scalado.android.photoeditor.xml:/system/etc/permissions/com.scalado.android.photoeditor.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.scalado.caps.xml:/system/etc/permissions/com.scalado.caps.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.softwareimaging.mot.xml:/system/etc/permissions/com.softwareimaging.mot.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.vzw.android.hux.xml:/system/etc/permissions/com.vzw.android.hux.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.vzw.android.smart.xml:/system/etc/permissions/com.vzw.android.smart.xml \
-    device/motorola/targa/prebuilt/etc/permissions/com.vzw.android.xml:/system/etc/permissions/com.vzw.android.xml \
     device/motorola/targa/prebuilt/etc/permissions/handheld_core_hardware.xml:/system/etc/permissions/handheld_core_hardware.xml \
     device/motorola/targa/prebuilt/etc/permissions/jcifs-krb5-1.3.12.xml:/system/etc/permissions/jcifs-krb5-1.3.12.xml \
-    device/motorola/targa/prebuilt/etc/permissions/platform.xml:/system/etc/permissions/platform.xml \
 
 # Prebuilts
+#    device/motorola/targa/prebuilt/app/Usb.apk:system/app/Usb.apk \
+
 PRODUCT_COPY_FILES += \
-    device/motorola/targa/prebuilt/app/Usb.apk:system/app/Usb.apk \
     device/motorola/targa/prebuilt/bin/mount_ext3.sh:system/bin/mount_ext3.sh \
     device/motorola/targa/prebuilt/bin/strace:system/bin/strace \
     device/motorola/targa/prebuilt/etc/TICameraCameraProperties.xml:system/etc/TICameraCameraProperties.xml \
@@ -81,24 +59,30 @@ PRODUCT_COPY_FILES += \
     device/motorola/targa/prebuilt/etc/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
     device/motorola/targa/prebuilt/usr/keychars/omap-keypad.kcm.bin:system/usr/keychars/omap-keypad.kcm.bin \
     device/motorola/targa/prebuilt/usr/keylayout/omap-keypad.kl:system/usr/keylayout/omap-keypad.kl \
-    device/motorola/solana/prebuilt/audio/acoustics.default.so:/system/lib/hw/acoustics.default.so \
-    device/motorola/solana/prebuilt/audio/alsa.default.so:/system/lib/hw/alsa.default.so \
-    device/motorola/solana/prebuilt/audio/alsa.omap4.so:/system/lib/hw/alsa.omap4.so \
-    device/motorola/solana/prebuilt/audio/libaudio_ext.so:/system/lib/libaudio_ext.so \
-    device/motorola/solana/prebuilt/audio/libaudiopolicy_ext.so:/system/lib/libaudiopolicy_ext.so \
-    device/motorola/solana/prebuilt/audio/libasound.so:/system/lib/libasound.so \
-    device/motorola/solana/prebuilt/audio/libmediaext.so:/system/lib/libmediaext.so \
+
+# Audio sucks currently.  Moto customized alsa_sound and while I'm working it out, I'll use phone libs.  blech.
+#    device/motorola/targa/prebuilt/audio/acoustics.default.so:/system/lib/hw/acoustics.default.so \
+#    device/motorola/targa/prebuilt/audio/alsa.default.so:/system/lib/hw/alsa.default.so \
+#    device/motorola/targa/prebuilt/audio/libaudiopolicy.so:/system/lib/libaudiopolicy.so \
+#    device/motorola/targa/prebuilt/audio/libaudiopolicy_ext.so:/system/lib/libaudiopolicy_ext.so \
+#    device/motorola/targa/prebuilt/audio/libmediaext.so:/system/lib/libmediaext.so \
+
+PRODUCT_COPY_FILES += \
+    device/motorola/targa/prebuilt/audio/libaudio.so:/system/lib/libaudio.so \
+    device/motorola/targa/prebuilt/audio/libaudio_ext.so:/system/lib/libaudio_ext.so \
+    device/motorola/targa/prebuilt/audio/libasound.so:/system/lib/libasound.so \
+    device/motorola/targa/prebuilt/audio/alsa.omap4.so:/system/lib/hw/alsa.omap4.so \
 
 # HW Libs
-#    gralloc.omap4 \
 PRODUCT_PACKAGES += \
+    gralloc.omap4 \
     gralloc.default \
 
 # Audio HAL
-#PRODUCT_PACKAGES += \
-#    acoustics.default \
-#    alsa.default \
 #    alsa.omap4 \
+PRODUCT_PACKAGES += \
+    acoustics.default \
+    alsa.default \
 
 # Thermal Manager
 PRODUCT_PACKAGES += \
@@ -108,10 +92,9 @@ PRODUCT_PACKAGES += \
 
 # Sound / Media
 #    libaudio \
-#    lubaudiopolicy \
 
-# Sound
 PRODUCT_PACKAGES += \
+    libaudiopolicy \
     libbundlewrapper \
     libreverbwrapper \
     libvisualizer \
@@ -122,7 +105,6 @@ PRODUCT_PACKAGES += \
     libreference-cdma-sms \
 
 # OMX
-#   libhdr_interface.so \ requires vendor/arcsoft -- removed
 PRODUCT_PACKAGES += \
     OMXCore \
     libOMX_CoreOsal \
@@ -154,10 +136,11 @@ PRODUCT_PACKAGES += \
 
 # Syslink and Tiler
 PRODUCT_PACKAGES += \
+    libd2cmap \
     libipc \
     libipcutils \
     libnotify \
-    libd2cmap \
+    libomap_mm_library_jni \
     librcm \
     libsyslink_ipc_listener \
     libsysmgr \
@@ -188,10 +171,6 @@ PRODUCT_PACKAGES += \
     syslink_tilertest.out \
     syslink_trace_daemon.out \
     utilsApp.out \
-
-# Opencore
-PRODUCT_PACKAGES += \
-    libopencore_common \
 
 # TI CameraHal
 PRODUCT_PACKAGES += \
@@ -253,17 +232,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libRS \
     librs_jni \
-    libomap_mm_library_jni \
     libSR_AudioIn \
     libicui18n \
     lubicuuc \
     libjni_latinime \
-    libmedia \
     libvorbisidec \
-
-# CM Packages
-#PRODUCT_PACKAGES += \
-#    Usb \
 
 # Tests -- Can remove later
 PRODUCT_PACKAGES += \
@@ -276,27 +249,13 @@ PRODUCT_PACKAGES += \
     VideoEncTest \
     omx_tests \
 
-# stuff for Bootmenu -- Can remove later
-PRODUCT_PACKAGES += \
+# Misc Packages
 #    safestrapmenu \
+#    2nd-init \
 
+PRODUCT_PACKAGES += \
+    Usb \
 
-# Add motobox symlinks
-#MOTOBOX_TOOLS := getconfig masterclear ptf setconfig test
-#SYMLINKS := $(addprefix /system/bin/,$(MOTOBOX_TOOLS))
-#$(SYMLINKS): MOTOBOX_BINARY := motobox
-#$(SYMLINKS): $(LOCAL_INSTALLED_MODULE) $(LOCAL_PATH)/Android.mk
-#	@echo "Symlink: $@ -> $(MOTOBOX_BINARY)"
-#	@mkdir -p $(dir $@)
-#	@rm -rf $@
-#	$(hide) ln -sf $(MOTOBOX_BINARY) $@
-#ALL_DEFAULT_INSTALLED_MODULES += $(SYMLINKS)
-#
-# We need this so that the installed files could be picked up based on the
-# local module name
-#ALL_MODULES.$(LOCAL_MODULE).INSTALLED := \
-#    $(ALL_MODULES.$(LOCAL_MODULE).INSTALLED) $(SYMLINKS)
-    2nd-init \
 
 FRAMEWORKS_BASE_SUBDIRS += \
     $(addsuffix /java, omapmmlib)
@@ -335,5 +294,3 @@ $(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_NAME := full_targa
 PRODUCT_DEVICE := targa
-
-
