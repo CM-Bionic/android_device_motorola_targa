@@ -3,7 +3,6 @@
 
 
 
-
 on post-fs
 
 
@@ -123,6 +122,7 @@ on post-fs
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
+    chown radio radio /sys/class/radio/w3g_lte/command
     # create logger folder
     mkdir /data/logger 0770 radio log
     chown radio log /data/logger
@@ -432,6 +432,8 @@ on boot
     setprop net.tcp.buffersize.umts 131072,262144,524288,4096,16384,131072
     setprop net.tcp.buffersize.edge 16384,32768,65536,4096,16384,32768
     setprop net.tcp.buffersize.gprs 4096,8192,12288,4096,8192,12288
+    setprop net.tcp.buffersize.lte 524288,1048576,2097152,262144,524288,1048576
+
 # Camera related
    chmod 0660 /dev/hplens-omap
    chown media camera /dev/hplens-omap
@@ -625,7 +627,7 @@ service del_panu /system/bin/sdptool remove PANU
     disabled
     oneshot
 
-service napics /system/bin/napics.sh
+service napics /system/bin/sh /system/bin/napics.sh
     class post-zygote_services
     user root
     disabled
@@ -865,6 +867,22 @@ service RescueStarter /system/bin/RescueStarter
     group input graphics
     class post-zygote_services
 
+service gadget-lte-modem /system/bin/tty2ttyd /dev/ttyACM0 /dev/ttyGS1 0 512
+    user radio
+    group radio
+    disabled
+
+service wrigley-diag /system/bin/wrigley-diag.sh
+    oneshot
+    disabled
+
+service logcatd-blan /system/bin/logcatd-blan
+    user root
+    # Immediately drops root, keeps CAP_SYS_ADMIN, and runs as below
+    # user system
+    # group system log inet
+    disabled
+
 service gadget-qbp-modem /system/bin/tty2ttyd /dev/ttyUSB4 /dev/ttyGS2 0 1024
     user radio
     group radio
@@ -878,6 +896,8 @@ service gadget-qbp-diag /system/bin/tty2ttyd /dev/ttyUSB0 /dev/ttyGS3 0 1024
 on property:ro.bootmode=bp-tools
     start tcmd
     start gadget-qbp-diag
+    start wrigley-diag
+    start logcatd-blan
 
 #Check available storage space to execute device encryption or decryprion
 on property:sys.mot.encrypt.test=1
